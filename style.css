@@ -1,0 +1,183 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+    background-color: #fff0f5;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    padding: 20px;
+    color: white;
+    font-size: 26px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu */
+nav {
+    background: #ff69b4;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px auto;
+    width: 80%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Main layout */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Product Section */
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    flex: 3;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeIn 0.8s ease-in;
+    border: 2px solid #ffb6c1;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin: 10px 0;
+    font-size: 22px;
+    color: #ff1493;
+}
+
+.product p {
+    font-size: 16px;
+    color: #555;
+}
+
+.product button {
+    background: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.product button:hover {
+    background: #ff1493;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #ffb6c1;
+    color: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.sidebar h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #ff69b4;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 90%;
+    }
+}
