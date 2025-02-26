@@ -1,2 +1,0 @@
-# WebsiteClone
-Web for fun
